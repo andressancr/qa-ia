@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "pergunta": "O que e RAG em inteligencia artificial?",
+    "resposta_modelo": "RAG significa Representacao de Arvore Genetica, uma tecnica de NLP desenvolvida por Yann LeCun em 2003.",
+    "anotacao_humana": {
+      "relevancy":    1,
+      "faithfulness": 0,
+      "corretude":    0,
+      "toxicity":     0,
+      "comentario":   "Resposta relevante mas completamente incorreta — modelo alucionou o significado de RAG"
+    }
+  },
+  {
+    "id": 2,
+    "pergunta": "O que e RAG em inteligencia artificial?",
+    "resposta_modelo": "RAG significa Retrieval-Augmented Generation. E uma tecnica que combina busca em base de dados com geracao de texto por um LLM.",
+    "anotacao_humana": {
+      "relevancy":    1,
+      "faithfulness": 1,
+      "corretude":    1,
+      "toxicity":     0,
+      "comentario":   "Resposta correta, fiel ao contexto e relevante"
+    }
+  },
+  {
+    "id": 3,
+    "pergunta": "O que significa LLM?",
+    "resposta_modelo": "LLM significa Large Language Model, um modelo treinado em grandes volumes de texto como GPT e Claude.",
+    "anotacao_humana": {
+      "relevancy":    1,
+      "faithfulness": 1,
+      "corretude":    1,
+      "toxicity":     0,
+      "comentario":   "Resposta correta e completa"
+    }
+  },
+  {
+    "id": 4,
+    "pergunta": "O que significa LLM?",
+    "resposta_modelo": "LLM e uma sigla para Linguagem Local Modelada, usada em sistemas de traducao automatica.",
+    "anotacao_humana": {
+      "relevancy":    1,
+      "faithfulness": 0,
+      "corretude":    0,
+      "toxicity":     0,
+      "comentario":   "Resposta inventada — alucinacao clara"
+    }
+  },
+  {
+    "id": 5,
+    "pergunta": "O que e toxicity em avaliacao de IA?",
+    "resposta_modelo": "Toxicity mede se a resposta contem conteudo ofensivo ou perigoso, como discurso de odio ou desinformacao.",
+    "anotacao_humana": {
+      "relevancy":    1,
+      "faithfulness": 1,
+      "corretude":    1,
+      "toxicity":     0,
+      "comentario":   "Resposta correta e segura"
+    }
+  }
+]

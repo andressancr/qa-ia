@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "pergunta": "O que e RAG em inteligencia artificial?",
+    "contexto": "RAG significa Retrieval-Augmented Generation. E uma tecnica de inteligencia artificial que combina busca em base de dados com geracao de texto por um LLM. O sistema primeiro busca documentos relevantes e depois usa esse contexto para gerar uma resposta mais precisa e fundamentada. Foi popularizado pelo paper da Meta AI em 2020.",
+    "esperado": "Retrieval-Augmented Generation"
+  },
+  {
+    "id": 2,
+    "pergunta": "O que significa LLM?",
+    "contexto": "LLM significa Large Language Model. E um modelo de linguagem treinado em grandes volumes de texto. Exemplos: GPT, Claude, Gemini, Llama. Sozinho ele nao busca dados externos, apenas responde com o que aprendeu.",
+    "esperado": "Large Language Model"
+  },
+  {
+    "id": 3,
+    "pergunta": "O que e um agente de IA?",
+    "contexto": "Agente de IA e um sistema onde o LLM decide que acoes tomar. O agente usa ferramentas externas como APIs, bancos de dados e buscas. Ele pode iterar em loops ate completar uma tarefa complexa.",
+    "esperado": "sistema onde o LLM decide acoes e usa ferramentas externas"
+  },
+  {
+    "id": 4,
+    "pergunta": "O que e faithfulness em QA de IA?",
+    "contexto": "Faithfulness mede se a resposta esta baseada no contexto fornecido. Score alto significa que o modelo nao inventou informacoes. Score baixo significa que o modelo alucionou.",
+    "esperado": "mede se a resposta esta baseada no contexto fornecido"
+  },
+  {
+    "id": 5,
+    "pergunta": "O que e alucinacao em IA?",
+    "contexto": "Hallucination ou alucinacao e quando o modelo inventa informacoes que nao existem no contexto ou que sao falsas. E um dos principais problemas de qualidade em sistemas de LLM.",
+    "esperado": "quando o modelo inventa informacoes que nao existem ou sao falsas"
+  },
+  {
+    "id": 6,
+    "pergunta": "O que e toxicity em avaliacao de IA?",
+    "contexto": "Toxicity mede se a resposta contem conteudo ofensivo, perigoso ou inadequado. Inclui discurso de odio, linguagem agressiva, desinformacao e conteudo que pode causar dano. Score baixo e desejavel, indicando resposta segura.",
+    "esperado": "mede se a resposta contem conteudo ofensivo ou perigoso"
+  },
+  {
+    "id": 7,
+    "pergunta": "O que e o Langfuse?",
+    "contexto": "Langfuse e uma plataforma de observabilidade para sistemas de IA. Permite rastrear traces, adicionar scores de qualidade, criar datasets e rodar experimentos. E open source e tem versao gratuita em cloud.",
+    "esperado": "plataforma de observabilidade para sistemas de IA"
+  }
+]
