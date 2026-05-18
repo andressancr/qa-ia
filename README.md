@@ -4,9 +4,28 @@ Pipeline completo de Quality Assurance para sistemas de IA, com avaliação auto
 
 ---
 
+## Background
+
+Este projeto foi desenvolvido com base na experiência prática em QA de LLMs adquirida durante atuação no projeto **LaMDA (Google)**, onde as mesmas métricas de avaliação — Faithfulness, Relevancy, Groundedness e Toxicity — eram aplicadas manualmente no processo de treinamento e alinhamento de grandes modelos de linguagem.
+
+### O que era feito manualmente no Google, hoje automatizado aqui
+
+| No projeto LaMDA (Google) | Neste projeto (automatizado) |
+|---|---|
+| Atribuição manual de scores de **Sensibleness** — coerência lógica do diálogo | `relevancy` — avalia se a resposta resolve a pergunta |
+| Atribuição manual de scores de **Groundedness** — factualidade ancorada em fontes | `faithfulness` — detecta se o modelo alucionou |
+| Classificação de **Safety & Toxicity** — conteúdo ofensivo e desinformação | `toxicity` — monitora respostas inadequadas |
+| Avaliação de **Specificity** — penalização de respostas genéricas | `corretude` — verifica se a resposta esperada foi atingida |
+| Coleta e rotulagem de dados para **RLHF e Fine-Tuning** | dataset com `expected_output` para experimentos no Langfuse |
+| Análise de **Taxonomia e Intenção** — validação de nuances e contexto | fluxo de QA cobrindo entrada, prompt, RAG, LLM, tools e resposta final |
+
+> No Google eu fazia manualmente o que hoje ferramentas como Langfuse, DeepEval e RAGAS automatizam. Avaliava respostas de LLMs atribuindo scores em critérios como coerência, relevância, factualidade e toxicidade — exatamente as métricas que o mercado hoje chama de Faithfulness, Relevancy, Groundedness e Toxicity. O LaMDA foi a base do que se tornou o Bard e depois o Gemini.
+
+---
+
 ## O que é este projeto
 
-Este projeto implementa um framework de QA de IA do zero, sem depender de APIs pagas. Utiliza modelos de linguagem locais via Ollama e rastreia todas as execuções no Langfuse, permitindo avaliar automaticamente a qualidade das respostas geradas por LLMs.
+Implementação de um framework de QA de IA do zero, sem depender de APIs pagas. Utiliza modelos de linguagem locais via Ollama e rastreia todas as execuções no Langfuse, permitindo avaliar automaticamente a qualidade das respostas geradas por LLMs.
 
 O objetivo é detectar problemas como alucinação, respostas irrelevantes e baixa fidelidade ao contexto — exatamente como é feito em projetos reais de IA em produção.
 
@@ -146,8 +165,6 @@ Relevancy:    0.8
 Faithfulness: 0.0
 Corretude:    0.9
 
-...
-
 ============================================================
 RESUMO FINAL
 ============================================================
@@ -159,9 +176,7 @@ Corretude media:       0.84
 Resultado: FALHOU
 ```
 
-O resultado **FALHOU** indica que o modelo llama3.2 alucionou em várias respostas — inventou significados incorretos para RAG, LLM e outros termos que estavam claramente definidos no contexto. O faithfulness baixo (0.36) detectou exatamente esse comportamento.
-
-Todos os traces ficam registrados no dashboard do Langfuse com histórico completo, timestamps e scores por pergunta.
+O resultado **FALHOU** indica que o modelo llama3.2 alucionou em várias respostas — inventou significados incorretos para RAG, LLM e outros termos que estavam claramente definidos no contexto. O faithfulness baixo (0.36) detectou exatamente esse comportamento — o mesmo tipo de problema identificado manualmente durante a atuação no projeto LaMDA.
 
 ---
 
@@ -177,4 +192,4 @@ Todos os traces ficam registrados no dashboard do Langfuse com histórico comple
 
 ## Autor
 
-Desenvolvido como parte dos estudos em QA de Inteligência Artificial.
+Desenvolvido como parte dos estudos em QA de Inteligência Artificial, com base na experiência prática em avaliação de LLMs adquirida no projeto LaMDA (Google).
