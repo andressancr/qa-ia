@@ -290,14 +290,6 @@ O pipeline instala o Ollama, baixa o modelo e roda o `run_dataset.py`. Se o scor
 
 ---
 
-## O que vem a seguir
-
-- [ ] Expandir dataset de anotações humanas para 50+ amostras
-- [ ] Implementar Context Precision e Context Recall
-- [ ] Comparar mais modelos no Langfuse (gemma, phi)
-
----
-
 ## Autor
 
 Desenvolvido como parte dos estudos em QA de Inteligência Artificial, com base na experiência prática em avaliação de LLMs adquirida no projeto LaMDA (Google).
